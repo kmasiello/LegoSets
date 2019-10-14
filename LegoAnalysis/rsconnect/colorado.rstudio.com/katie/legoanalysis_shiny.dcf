@@ -1,0 +1,12 @@
+name: legoanalysis_shiny
+title: LegoAnalysis_Shiny
+username: katie
+account: katie
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 2596
+bundleId: 26127
+url: https://colorado.rstudio.com:443/rsc/content/2596/
+when: 1562104274.18324
+asMultiple: FALSE
+asStatic: FALSE

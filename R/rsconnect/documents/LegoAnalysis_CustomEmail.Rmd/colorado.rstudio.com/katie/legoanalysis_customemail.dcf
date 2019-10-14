@@ -1,0 +1,12 @@
+name: legoanalysis_customemail
+title: LegoAnalysis_CustomEmail
+username: katie
+account: katie
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 2595
+bundleId: 26370
+url: https://colorado.rstudio.com/rsc/content/2595/
+when: 1564699394.78007
+asMultiple: FALSE
+asStatic: FALSE

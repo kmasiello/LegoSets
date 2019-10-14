@@ -1,0 +1,12 @@
+name: legoanalysis
+title: LegoAnalysis
+username: katie
+account: katie
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 2594
+bundleId: 26123
+url: https://colorado.rstudio.com:443/rsc/content/2594/
+when: 1562101090.50801
+asMultiple: FALSE
+asStatic: FALSE
