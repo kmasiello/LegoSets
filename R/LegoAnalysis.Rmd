@@ -20,9 +20,27 @@ params:
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(kableExtra)
+library(pins)
 
-setsData <-read_csv(("sets.csv"))
+
 ```
+
+```{r pin and retrieve dataset}
+pins::board_register(
+    "rsconnect", 
+    server = "https://colorado.rstudio.com/rsc/connect/",
+    key = Sys.getenv("RSC_API_KEY")
+    )
+
+# Do this once to pin my data to RSC
+# setsData <-read_csv(("sets.csv"))
+# lego_set_data <- setsData
+# pin(lego_set_data, description = "LEGO set data", board = "rsconnect")
+
+# Retrieve Pin
+setsData <- pin_get("katie/lego-set-data", board = "rsconnect")
+```
+
 
 
 ```{r Number of Sets}

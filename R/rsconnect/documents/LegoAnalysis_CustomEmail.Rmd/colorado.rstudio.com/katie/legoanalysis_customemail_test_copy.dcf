@@ -1,0 +1,12 @@
+name: legoanalysis_customemail_test_copy
+title: LegoAnalysis_CustomEmail test copy
+username: katie
+account: katie
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 4146
+bundleId: 33385
+url: https://colorado.rstudio.com/rsc/content/4146/
+when: 1579238168.88705
+asMultiple: TRUE
+asStatic: FALSE
