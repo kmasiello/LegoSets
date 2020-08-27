@@ -1,4 +1,5 @@
 ---
+title: "Lego Analysis"
 editor_options:
   chunk_output_type: console
 output:
@@ -21,14 +22,14 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(kableExtra)
 library(pins)
-
+# library(reactable)
 
 ```
 
 ```{r pin and retrieve dataset}
 pins::board_register(
-    "rsconnect", 
-    server = "https://colorado.rstudio.com/rsc/connect/",
+    "rsconnect",
+    server = Sys.getenv("CONNECT_SERVER"),
     key = Sys.getenv("RSC_API_KEY")
     )
 
@@ -112,6 +113,7 @@ DT::datatable(sets_in_year, escape = FALSE,
         text = 'Download'
       )))
               )
+
 
 ```
 
