@@ -1,0 +1,83 @@
+---
+title: "Lego Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(pins)
+```
+
+```{r}
+pins::board_register(
+    "rsconnect",
+    server = Sys.getenv("CONNECT_SERVER"),
+    key = Sys.getenv("RSC_API_KEY")
+    )
+
+# Retrieve Pin
+setsData <- pin_get("katie/lego-set-data", board = "rsconnect")
+```
+
+Sidebar {.sidebar}
+=======================================================================
+
+Select parameters of interest
+
+```{r}
+selectInput(
+    inputId =  "year", 
+    label = "Select year:", 
+    choices = 1953:2017
+)
+```
+
+Dashboard
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+### Sets released in year {.value-box}
+
+```{r}
+parts_in_year <- reactive({setsData %>% filter(year == input$year) %>% nrow()})
+
+renderValueBox({
+  valueBox(
+    value = parts_in_year(),
+    icon = "fa-hashtag"
+    )
+})
+
+```
+
+
+
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
